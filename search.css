@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,600&display=swap");
+@font-face {
+    font-family: "soehne";
+    src: url("fonts/test-soehne-buch.woff") format("woff");
+}
+
+@font-face {
+    font-family: "din";
+    src: url("fonts/DINEngschriftStd.woff") format("woff");
+}
+
+@font-face {
+    font-family: "untitled";
+    src: url("fonts/test-untitled-sans-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "fin-reg";
+    src: url("fonts/test-financier-text-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "fin-ita";
+    src: url("fonts/test-financier-text-regular-italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "mercury";
+    src: url("fonts/Mercury\ Display\ Roman.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "hatton";
+    src: url("fonts/Hatton-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "hatton-light";
+    src: url("fonts/Hatton-Ultralight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "hk-light";
+    src: url("fonts/HKGrotesk-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "gtamerica";
+    src: url("fonts/GT-America-Standard-Regular-Trial.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "gtamerica-light";
+    src: url("fonts/GT-America-Extended-Thin-Trial.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "gtamerica-medium";
+    src: url("fonts/GT-America-Extended-Medium-Trial.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "gtamerica-ex-light";
+    src: url("fonts/GT-America-Extended-Light-Trial.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "gtamerica-ex-reg";
+    src: url("fonts/GT-America-Extended-Regular-Trial.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "domaine";
+    src: url("fonts/TestDomaineDisplayNarrow-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "domaine-ita";
+    src: url("fonts/TestDomaineDisplayNarrow-RegularItalic.otf") format("opentype");
+}
+
+body {
+    margin-top: -6px;
+    margin-left: -3px;
+    margin-right: -3px;
+    margin-bottom: -3px;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #FFFCF3;
+}
+
+#searchbar {
+    display: flex;
+    justify-content: center;
+    background-color: #132200;
+    height: 400px;
+    width: 100vw;
+    font-family: "untitled";
+}
+
+input {
+    font-family: "untitled";
+    font-size: 30px;
+    outline: none;
+    width: 700px;
+    background-color: #FFFCF3;
+}
+
+label {
+    font-family: "untitled";
+    font-size: 30px;
+    color: #FFFCF3;
+}
+
+.yt-search {
+    margin-top: 80px;
+}
+
+.yt-search-input {
+    margin-top: 40px;
+}
