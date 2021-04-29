@@ -94,13 +94,17 @@ body {
     display: flex;
     justify-content: center;
     background-color: #62151D;
-    height: 400px;
+    height: 600px;
     width: 100vw;
     font-family: "untitled";
 }
 
+button {
+    outline: none;
+}
+
 input {
-    font-family: "untitled";
+    font-family: "Montserrat";
     font-size: 30px;
     outline: none;
     width: 700px;
@@ -122,7 +126,7 @@ label {
 }
 
 #search {
-    font-family: "untitled";
+    font-family: "Montserrat";
     font-size: 30px;
     background-color: #f5efdf;
     border: 3px solid #e9bc69;
@@ -135,7 +139,7 @@ label {
 }
 
 #search-lucky {
-    font-family: "untitled";
+    font-family: "Montserrat";
     font-size: 30px;
     background-color: #f5efdf;
     border: 3px solid #e9bc69;
@@ -165,6 +169,7 @@ label {
 .cards {
     display: flex;
     justify-content: center;
+    flex-flow: row wrap;
 }
 
 .cols {}
@@ -175,13 +180,63 @@ label {
 
 .card {
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: #9e9a9a;
     width: 500px;
     height: 300px;
-    margin: 40px 20px 40px 20px;
+    margin: 60px 20px 60px 20px;
     cursor: pointer;
 }
 
 .card:hover {
+    opacity: 0.5;
+}
+
+.card-left {
+    flex-grow: 1;
+}
+
+.name {
+    font-family: "untitled";
+    font-size: 22px;
+    background-color: #FFFCF3;
+    color: black;
+    text-align: left;
+    padding-left: 8px;
+    text-transform: capitalize;
+    width: 850px;
+    margin-top: 30px;
+}
+
+.duration {
+    font-family: "untitled";
+    font-size: 22px;
+    text-align: right;
+    background-color: #FFFCF3;
+    color: black;
+}
+
+.flex-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-item {
+    margin-top: 180px;
+    flex: 1 1 40vw;
+    min-height: 400px;
+    max-height: 400px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 2px;
+    padding: 2vmin;
+    background-color: black;
+    cursor: pointer;
+    /* for testing*/
+}
+
+.flex-item:hover {
     opacity: 0.5;
 }

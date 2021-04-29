@@ -122,3 +122,5 @@ STATICFILES_DIRS = [
     '/youtube_browser_app/static',
 ]
 STATIC_URL = '/static/'
+
+YT_KEY = "placekeyhere"

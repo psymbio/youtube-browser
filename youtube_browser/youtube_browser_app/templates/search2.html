@@ -13,17 +13,20 @@
 
 <body id="vantas">
     <div id="searchbar">
-        <form class="yt-search">
-            <label>Just the top 12 from Youtube!</label>
+        <form class="yt-search" method="POST">
+            <label>Just the top n from Youtube!</label>
+            <br> {% csrf_token %}
+            <input class="yt-search-input" type="text" placeholder="Search" name="searchquery">
             <br>
-            <input class="yt-search-input" type="text" placeholder="Search">
+            <input class="yt-search-input" type="number" placeholder="Number of Videos to Search for" name="notosearch">
             <br>
             <br>
-            <span id="search">Youtube Search</span>
-            <span id="search-lucky">I'm Feeling Lucky</span>
+            <button id="search" type="submit" name="search">Youtube Search</button>
+            <button id="search-lucky" type="submit" name="searchlucky">I'm Feeling Lucky</button>
         </form>
     </div>
-    <div class="cards">
+    <!--
+        <div class="cards">
         <div class="rows">
             <div class="cols">
                 <div class="card"></div>
@@ -67,12 +70,43 @@
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ==" crossorigin="anonymous"></script>
-    <script src="{% static 'animation.js'%}"></script>
+    
+    <div class="cards">
+        <div class="rows">
+            {% for video in videos %}
+            <div class="cols">
+                <div class="card">
+                    <img src="{{ video.thumbnail }}" onclick="location.href='{{ video.url }}'">
+                    <span class="name">{{ video.title }}</span>
+                    <span class="duration">{{ video.duration }}</span>
+                </div>
+                <div class="card card-left">
+                    <img src="{{ video.thumbnail }}" onclick="location.href='{{ video.url }}'">
+                    <span class="name">{{ video.title }}</span>
+                    <span class="duration">{{ video.duration }}</span>
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+-->
+    <div class="flex-content">
+        {% for video in videos %}
+        <div class="flex-item"><img src="{{ video.thumbnail }}" onclick="location.href='{{ video.url }}'">
+            <div class="name">{{ video.title }}</div>
+            <div class="duration">{{ video.duration }} mins</div>
+        </div>
+        {% endfor %}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js " integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ==" crossorigin=" anonymous "></script>
+    <script src="{% static 'animation.js'%} "></script>
     <script>
         VANTA.TOPOLOGY({
-            el: "#searchbar",
+            el: "#searchbar ",
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
