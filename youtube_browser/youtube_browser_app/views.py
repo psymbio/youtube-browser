@@ -27,9 +27,9 @@ def index(request):
         for result in results:
             # print(result['id']['videoId'])
             video_ids.append(result['id']['videoId'])
-        
-        #if request.POST.get('searchlucky') == True:
-            #return redirect("https://www.youtube.com/watch?v="+video_ids[0])
+        lucky =  request.POST.get('searchlucky', False)
+        if lucky == True:
+            return redirect("https://www.youtube.com/watch?v="+video_ids[0])
         video_params = {
             'part': 'snippet, contentDetails',
             'key': settings.YT_KEY,
